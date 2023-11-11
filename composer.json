@@ -1,0 +1,19 @@
+{
+    "name": "waleed/custom-news-scraper",
+    "description": "News Scraper",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./includes"
+        }
+    },
+    "authors": [
+        {
+            "name": "waleed Raza",
+            "email": "raanawaleed@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

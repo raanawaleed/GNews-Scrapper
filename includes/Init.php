@@ -12,6 +12,7 @@ final class Init
 		return [
 			Pages\Admin::class,
 			Base\Enqueue::class,
+			Base\BaseController::class,
 			Base\CustomMetaBoxController::class,
 			Base\NewsController::class,
 		];

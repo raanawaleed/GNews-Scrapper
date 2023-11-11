@@ -21,7 +21,7 @@ class Admin extends BaseController
 
 	public $subpages = array();
 
-	public function register() 
+	public function register()
 	{
 		$this->settings = new SettingsApi();
 
@@ -36,6 +36,9 @@ class Admin extends BaseController
 		$this->setFields();
 
 		$this->settings->addPages($this->pages)->withSubPage('Dashoard')->addSubPages($this->subpages)->register();
+
+		add_action('wp_ajax_scrape_and_update_news', array($this->callbacks, 'scrape_and_update_news'));
+		add_action('wp_ajax_nopriv_scrape_and_update_news', array($this->callbacks, 'scrape_and_update_news'));
 	}
 
 	public function setPages()
@@ -55,7 +58,7 @@ class Admin extends BaseController
 
 	public function setSubpages()
 	{
-		$this->subpages = array(
+		/*$this->subpages = array(
 			array(
 				'parent_slug' => 'gnews_plugin',
 				'page_title' => 'Custom Post Types',
@@ -66,7 +69,7 @@ class Admin extends BaseController
 					echo '<h1>GNews</h1>';
 				}
 			)
-		);
+		);*/
 	}
 
 	public function setSettings()

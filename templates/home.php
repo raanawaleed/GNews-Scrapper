@@ -9,4 +9,6 @@
 			submit_button();
 		?>
 	</form>
+	
+	<button class="button" id="scrape-news-button">Scrape News</button>
 </div>

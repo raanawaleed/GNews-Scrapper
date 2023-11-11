@@ -10,6 +10,7 @@ final class Init
 	 */
 	public static function get_services(): array {
 		return [
+			Pages\Admin::class,
 			Base\Enqueue::class,
 			Base\CustomMetaBoxController::class,
 			Base\NewsController::class,
